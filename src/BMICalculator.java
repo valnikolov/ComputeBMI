@@ -4,8 +4,8 @@ public class BMICalculator {
 
     public static void main(String[] args) {
 
-        final double LBS_TO_KG_CONVERSION_FACTOR = 0.45359237;
-        final double IN_TO_METERS_CONVERSION_FACTOR = 0.0254;
+        final double KGS_PER_POUND = 0.45359237;
+        final double METERS_PER_INCH = 0.0254;
 
         Scanner scanner = new Scanner(System.in);
 
@@ -15,8 +15,8 @@ public class BMICalculator {
         System.out.print("Enter height in inches: ");
         double inches = scanner.nextDouble();
 
-        double kgs = lbs * LBS_TO_KG_CONVERSION_FACTOR;
-        double meters = inches * IN_TO_METERS_CONVERSION_FACTOR;
+        double kgs = lbs * KGS_PER_POUND;
+        double meters = inches * METERS_PER_INCH;
 
         double bmi = kgs / Math.pow(meters, 2);
 
