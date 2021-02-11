@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ComputeBMI {
+public class BMICalculator {
 
     public static void main(String[] args) {
 
