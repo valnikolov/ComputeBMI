@@ -10,17 +10,27 @@ public class BMICalculator {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter weight in pounds: ");
-        double lbs = scanner.nextDouble();
+        double weightInLBS = scanner.nextDouble();
 
         System.out.print("Enter height in inches: ");
-        double inches = scanner.nextDouble();
+        double heightInInches = scanner.nextDouble();
 
-        double kgs = lbs * KGS_PER_POUND;
-        double meters = inches * METERS_PER_INCH;
+        double weightInKGS = weightInLBS * KGS_PER_POUND;
+        double heightInMeters = heightInInches * METERS_PER_INCH;
 
-        double bmi = kgs / Math.pow(meters, 2);
+        double bmi = weightInKGS / Math.pow(heightInMeters, 2);
 
         System.out.printf("BMI is %.2f%n", bmi);
+
+        if (bmi < 18.5) {
+            System.out.println("Underweight");
+        } else if (bmi < 25) {
+            System.out.println("Normal");
+        } else if (bmi < 30) {
+            System.out.println("Overweight");
+        } else {
+            System.out.println("Obese");
+        }
 
     }
 
